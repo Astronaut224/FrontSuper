@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid black;
+        }
+        .son {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* 过渡效果，经过0.5秒完成过渡 */
+            transition: all 0.5s;
+        }
+        /* translate的值可以写像素（正负），可以指写百分比 */
+        .father:hover .son {
+            transform: translate(100px,50px);
+            transform: translate(-100px,-50px);
+            transform: translate(-50%,-50%);
+            /* 单向位移 */
+            transform: translateX(100px);
+            transform: translateY(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

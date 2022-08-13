@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.box {
+    width: 1110px;
+    height: 247px;
+    margin: 20px auto;
+}
+
+.box li {
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    width: 350px;
+    height: 247px;
+    overflow: hidden;
+}
+
+.box li:last-child {
+    margin-right: 0;
+}
+
+.box li .pic {
+    transition: all 0.5s;
+}
+
+.box li .pic img {
+    width: 100%;
+}
+
+.box li .text {
+    position: absolute;
+    left: 30px;
+    bottom: -20px;
+    z-index: 1;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.box .text h4 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.box .text h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.box .text p {
+    font-size: 14px;
+}
+
+.box text p b {
+    color: red;
+}
+
+.box .mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 350px;
+    height: 247px;
+    background-image: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.8)
+    );
+
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+/* hover效果：鼠标移入li，图片pic变大，渐变背景mask显现，文本text向上位移 */
+.box li:hover .pic {
+    transform:scale(1.2)
+}
+.box li:hover .mask {
+    opacity: 1;
+}
+.box li:hover .text {
+    transform: translateY(-50px);
+}

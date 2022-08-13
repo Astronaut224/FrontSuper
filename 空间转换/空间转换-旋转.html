@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 沿着X轴旋转，父级元素添加透视属性 */
+        .boxX {
+            margin: 50px auto;
+            width: 200px;
+            height: 150px;
+            perspective: 1000px;
+        }
+        .boxX img {
+            width: 100%;
+            transition: all 1s;
+        }
+        .boxX:hover img {
+            transform: rotateX(360deg);
+        }
+
+        /* 沿着Y轴旋转，父级元素添加透视属性 */
+        .boxY {
+            margin: 50px auto;
+            width: 200px;
+            height: 150px;
+            perspective: 1000px;
+        }
+        .boxY img {
+            width: 100%;
+            transition: all 1s;
+        }
+        .boxY:hover img {
+            transform: rotateY(360deg);
+        }
+
+        /* 沿着Z轴旋转 */
+        .boxZ {
+            margin: 50px auto;
+            width: 200px;
+            height: 150px;
+        }
+        .boxZ img {
+            width: 100%;
+            transition: all 1s;
+        }
+        .boxZ:hover img {
+            transform: rotateZ(360deg);
+        }
+
+        /* 关于旋转方向正负问题，从坐标轴正方向看，如果是顺时针转数值就是正的。
+        X正方向朝右，Y正方向朝下，Z正方向朝看电脑的人 */
+    </style>
+</head>
+<body>
+    <div class="boxX"><img src="./images/hero.jpeg" alt=""></div>
+    <div class="boxY"><img src="./images/hero.jpeg" alt=""></div>
+    <div class="boxZ"><img src="./images/hero.jpeg" alt=""></div>
+</body>
+</html>
