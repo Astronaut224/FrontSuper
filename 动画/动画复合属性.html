@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 动画复合属性 */
+        /* animation: 动画名称（必填） 动画时长（必填） 速度曲线 延长时间 重复次数 动画方向 执行完毕时状态 */
+        /* 动画属性不分先后顺序，如果有两个时间，第一个是时长，第二个是延长 */
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            /* linear表示动画是线性速度 */
+            /* animation: change 1s linear; */
+
+            /* steps(n)是将动画分成n段 */
+            /* animation: change 1s steps(3); */
+
+            /* 延长时间是指动画开始前的时间长度 */
+            /* animation: change 1s linear 2s; */
+            
+            /* 重复次数表示动画重复播放次数，可以使用infinite无限循环 */
+            /* animation: change 1s linear 3; */
+            /* animation: change 1s linear infinite; */
+
+            /* 动画方向,alternate可以用来表示反方向,alternate-reverse从to向from执行 */
+            /* animation: change 1s infinite alternate; */
+
+            /* 执行完毕状态,默认backwards是动画执行动画前最初的状态,forwards是最后的状态 */
+            /* animation: change 1s forwards; */
+
+            /* 拆分写法 */
+            animation-name: change;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        .box:hover {
+            /* 鼠标移入的时候暂停动画 */
+            animation-play-state: paused;
+        }
+
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

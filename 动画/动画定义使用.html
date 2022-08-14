@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            animation: change 1s;
+        }
+
+        /* 定义动画的两种方法：from...to...和百分比 */
+        /* @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        } */
+
+        @keyframes change {
+            0% {
+                width: 200px;
+            }
+            30% {
+                width: 400px;
+            }
+            60% {
+                width: 600px;
+            }
+            100% {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
