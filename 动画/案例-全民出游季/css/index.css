@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    background: url(../images/f1_1.jpg) no-repeat center 0;
+    background-size: cover;
+}
+
+.title img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+}
+
+.lu img {
+    position: absolute;
+    left: 58%;
+    top: 15%;
+    width: 150px;
+}
+
+.cloud img{
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -300px;
+    top: 20px;
+    animation: move 4s linear infinite;
+}
+
+.cloud img:nth-child(2) {
+    margin-left: 400px; 
+    top: 100px;
+    animation: move 4s linear infinite .3s;
+}
+
+.cloud img:nth-child(3) {
+    margin-left: -550px;
+    top: 200px;
+    animation: move 4s linear infinite .6s;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0px);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.point img {
+    position: absolute;
+    left: 55%;
+    bottom: 7%;
+    width: 80px;
+}
+
+.point img:nth-child(1) {
+    margin-left: -500px;
+    animation: jump 1s infinite alternate;
+}
+
+.point img:nth-child(2) {
+    margin-left: -250px;
+    animation: jump 1s infinite alternate .3s;
+}
+.point img:nth-child(3) {
+    animation: jump 1s infinite alternate .6s;
+}
+.point img:nth-child(4) {
+    margin-left: 250px;
+    animation: jump 1s infinite alternate .9s;
+}
+
+@keyframes jump {
+    to {
+        transform: translateY(-20px);
+    }
+}

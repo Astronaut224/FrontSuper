@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1rem = 1 html标签字号大小 */
+        /* 使用rem的第一步是设置html标签字号大小 */
+
+        html {
+            font-size: 20px;
+        }
+
+        .box {
+            width: 5rem;
+            height: 3rem;
+            background-color: pink;
+        }
+
+        /* 使用rem完成移动适配：
+        1. 媒体查询：根据不同视口，设置HTML标签字号
+        2. 设备宽度不同，设置合适的HTML字号大小，rem中一般设置为视口的1/10 */
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 逐帧动画在精灵图的时候使用，其他的情况一般用补间动画 */
+        /* 精灵动画使用步骤：
+            1. 准备区域：精灵图小图大小
+            2. 移动背景：移动精灵图的宽度
+            3. 速度曲线：使用逐帧steps，需要的话无限循环infinite */
+        .human {
+            width: 140px;
+            height: 140px;
+            background-image: url(images/bg.png);
+            
+            /* 逐帧动画，steps(N)中N是精灵图小图的个数 */
+            animation: 
+            move 1s steps(12) infinite,
+            run 3s linear infinite;
+        }
+        /* 动画是移动背景精灵图实现的，开始位置0 0，向左移动精灵图，长度为精灵图的长度 */
+        @keyframes move {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -1680px 0;
+            }
+        }
+        @keyframes run {
+            /* 如果动画初始状态和盒子默认样式相同，可以省略from */
+            /* from {
+                transform: translateX(0px);
+            } */
+            to {
+                transform: translateX(600px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="human"></div>
+</body>
+</html>

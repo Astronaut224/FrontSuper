@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 使用媒体查询，根据不同设备的视口宽度，设置不同CSS（html标签字号） */
+        /* 效果和if语句很像，if满足视口宽度，CSS就生效 */
+        @media (width: 375.2px) {
+            html {
+                font-size: 37.52px;
+            }
+        }
+
+        @media (width:390.4px) {
+            html {
+                font-size: 39.04px;
+            }
+        }
+
+        .box {
+            width: 5rem;
+            height: 3rem;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

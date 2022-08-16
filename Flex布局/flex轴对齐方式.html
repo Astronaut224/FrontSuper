@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            /* flex布局由弹性容器、弹性盒子、主轴和交叉轴组成 */
+            /* 视觉效果：弹性盒子水平排列，原因是主轴默认水平方向，弹性盒子沿着主轴排列。 */
+            display: flex;
+
+            /* 水平居中 */
+            /* justify-content: center; */
+            /* 间距在弹性盒子（子元素）之间 */
+            /* justify-content: space-between; */
+            /* 间距在弹性盒子两侧，视觉效果是盒子之间间距大，边上间距小 */
+            /* justify-content: space-around; */
+            /* 所有间距都一样 */
+            /* justify-content: space-evenly; */
+
+            /* 垂直居中 */
+            /* align-items: center; */
+            /* 默认值，视觉效果是弹性盒子被拉伸，测试时不能设置弹性盒子的高，要注释掉 */
+            /* align-items: stretch; */
+
+            height: 200px;
+            border: 1px solid #000;
+        }
+        .box div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .box div:nth-child(2) {
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

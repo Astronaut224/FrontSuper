@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box li {
+            display: flex;
+            /* 先确认主轴方向，再设置主轴和侧轴位置 */
+            /* 修改主轴方向：列 */
+            flex-direction: column;
+            
+            /* 视觉效果，盒子水平居中 */
+            align-items: center;
+
+            /* 视觉效果，盒子垂直居中 */
+            justify-content: center;
+
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ccc;
+        }
+
+        .box img {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <img src="./media.png" alt="">
+                <span>媒体</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
