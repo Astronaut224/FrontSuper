@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 媒体查询一样符合CSS层叠性，如果用min-width从小到大写，用max-width从大到小写 */
+        /* @media (min-width: 1200px) {
+            body {
+                background-color: skyblue;
+            }
+        } */
+
+        /* 视口宽度小于等于768px，背景色是pink */
+        @media (max-width: 768px) {
+            body {
+                background-color: pink;
+            }
+        }
+        /* 视口宽度大于等于1200px，背景色是skyblue */
+        @media (min-width: 1200px) {
+            body {
+                background-color: skyblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

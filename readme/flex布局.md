@@ -112,7 +112,7 @@ align-items: stretch;
 
 
 
-## 弹性盒子尺寸特点
+**弹性盒子尺寸特点**
 
 **flex布局**下，**主轴和侧轴如果不定义**，
 
@@ -121,4 +121,69 @@ align-items: stretch;
 弹性盒子的高如果不设置，盒子的高默认被拉伸成父级元素的高。
 
 个人总结：宽缩高胀
+
+## 4. 修改主轴方向
+
+主轴方向默认是水平的，可以设置`flex-direction`的值来修改主轴的方向。
+
+```html
+.box li {
+	display: flex;
+	/* 修改主轴的方向为垂直方向 */
+	flex-direction: column;
+	
+	/* 因为主轴方向变成垂直方向，所以这句作用变成了水平居中 */
+	align-items: center;
+
+	/* 这行的作用变成了垂直居中 */
+	justify-content: center;
+}
+```
+
+所以在设置主轴和侧轴对齐方式时，需要先确定主轴的方向。
+
+
+
+## 5. 弹性盒子换行
+
+Flex布局下，弹性盒子默认沿着主轴排列。
+
+当弹性模型的宽不够的时候，会挤压弹性盒子的宽，使弹性盒子在一行排列。
+
+默认情况下弹性盒子不会换行，可以通过设置`flex-wrap`来换行。
+
+```html
+.box {
+	display: flex;
+	/* 默认情况下弹性盒子不换行 */
+    /* flex-wrap: nowrap; */
+	
+	/* 换行 */
+	flex-wrap: wrap;
+}
+```
+
+
+
+## 6. 行对齐方式
+
+弹性盒子换行后，发现行间距均分了父级元素剩下的尺寸。
+
+可以通过设置`align-content`设置行间距，用法和`justify-content`差不多。
+
+```html
+.box {
+	display: flex;
+	
+	/* 换行 */
+	flex-wrap: wrap;
+
+	/* 行间距分配在上下两侧，弹性盒子紧挨着居中 */
+	align-content: center;
+	/* 行间距分配在所有弹性盒子的两侧，效果是盒子之间较宽，上下两侧较窄 */
+	align-content: space-around;
+	/* 行间距分配在弹性盒子之间，上下两侧紧贴着模型的边 */
+	align-content: space-between;
+}
+```
 

@@ -1,0 +1,21 @@
+// out: ./
+
+// 68 * 29 ，视口宽375px 高667px
+.box {
+    width: (68 / 3.75vw);
+    height: (29 / 3.75vw);
+    background-color: pink;
+}
+
+.box2 {
+    width: (68 / 6.67vh);
+    height: (29 / 6.67vh);
+    background-color: skyblue;
+}
+
+// vh和vw混用，全面屏和非全面屏比例不同，所以不要混用
+// .box3 {
+//     width: (68 / 3.75vw);
+//     height: (29 / 6.67vh);
+//     background-color: green;
+// }
