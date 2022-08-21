@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        div {
+            height: 50px;
+            background-color: pink;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- container类有默认宽度，居中，两边有15px的padding -->
+    <div class="container">1</div>
+
+    <!-- row类两边有-15px的margin，可以和container类的间距抵消 -->
+    <div class="container">
+        <div class="row">2</div>
+    </div>
+
+    <!-- 了解：container-fluid类宽度100%，两边自带15px的间距 -->
+    <div class="container-fluid">3</div>
+</body>
+</html>
